@@ -1,0 +1,29 @@
+﻿.fotoPerfil {
+    width: 20%;
+    height: 20%;
+}
+
+.logoTecnologias {
+    width: 30%;
+    height: 30%;
+}
+
+#seccion1 {
+    margin: 0rem 0 10rem 0;
+}
+
+#seccion1 p {
+    font-family: sans-serif;
+    line-height: 1.5;
+    font-size: 1.25rem;
+    color: white;
+}
+
+.cabecera{
+    font-weight: bold;
+}
+
+.habilidades ul{
+    list-style: none;
+    padding-left: 0;
+}

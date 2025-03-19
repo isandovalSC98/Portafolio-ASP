@@ -1,0 +1,108 @@
+﻿
+
+@{
+    ViewData["Title"] = "Home Page";
+
+}
+@{
+    DateTime day = DateTime.Now;
+
+    var nombres = new List<string>() { "carlos", "seba", "mario", "fabian" };
+
+}
+
+<div class="text-center">
+    @* <h1 class="display-4">Soy @Model.Nombre</h1> *@
+    @* @{ *@
+    @*     if (Model.Edad >= 25) *@
+    @*     { *@
+    @*         <h2>Edad: @Model.Edad</h2> *@
+    @*     } *@
+    @*     else *@
+    @*     { *@
+    @*         <h2>nada que mostrar</h2> *@
+    @*     } *@
+
+    @* } *@
+    
+    
+   
+
+    @* <h1>@day</h1> *@
+
+    @* @{ *@
+    @*     foreach (var asdas in nombres) *@
+    @*     { *@
+    @*         <li>@asdas</li> *@
+    @*     } *@
+    @* } *@
+
+    <div class="text-center">
+        <h1>Soy @Model.Nombre</h1>
+        <h2>Soy un desarrollador full stack especializado con tecnologias como .NET y PHP.</h2>
+        
+        <img class="fotoPerfil" src="imagenes/usuario.png" alt="Alternate Text" />
+    </div>
+
+    <div class="text-center">
+        <img class="logoTecnologias" src="imagenes/Microsoft_.NET_logo.svg.png" alt="Alternate Text" />
+    </div>
+
+    <div class="row justify-content-center text-center bg-primary">
+        <div class="col col-md-7" id="seccion1">
+            <p>
+               Soy un Ingeniero en Informática apasionado por la tecnología y la innovación, con un enfoque constante en superar nuevos retos y 
+               expandir mis conocimientos. Desde que me titulé en 2021, he dedicado mi carrera a desarrollar una sólida base técnica y a perfeccionar 
+               mis habilidades en programación y análisis de sistemas. Estoy siempre en busca de nuevas oportunidades para crecer profesionalmente y 
+               contribuir con mis conocimientos y habilidades a proyectos innovadores. Estoy convencido de que mi pasión por la tecnología, 
+               mi capacidad de aprendizaje rápido y mi compromiso con la excelencia me convierten en un candidato ideal para cualquier equipo de desarrollo.
+            </p>
+        </div>
+    </div>
+
+</div>
+
+<div style="margin-top: -105px">
+    <div class="row" style="justify-content: center; text-align: center;">
+        <div class="col col-3 bg-white habilidades" style="border-radius: 15px 0 0 15px; box-shadow: 0 5px 5px 0 gray">
+            <h3>Back-end</h3>
+            <p>texto texto texto</p>
+            <p class="text-primary cabecera">
+                Stack:
+            </p>
+            <p>
+                ASP.NET
+            </p>
+            <p class="text-primary cabecera">
+                Experiencia:
+            </p>
+            <ul>
+                <li>.net mvc</li>
+                <li>.net mvc</li>
+                <li>.net mvc</li>
+            </ul>
+        </div>
+        @* dasd *@
+        <div class="col col-3 bg-white habilidades" style="border-radius: 0px 15px 15px 0px; box-shadow: 0 5px 5px 0 gray">
+            <h3>Front-end</h3>
+            <p>texto texto texto</p>
+            <p class="text-primary cabecera">
+                Stack:
+            </p>
+            <p>
+                ASP.NET
+            </p>
+            <p class="text-primary cabecera">
+                Experiencia:
+            </p>
+            <ul>
+                <li>.net mvc</li>
+                <li>.net mvc</li>
+                <li>.net mvc</li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+
+
