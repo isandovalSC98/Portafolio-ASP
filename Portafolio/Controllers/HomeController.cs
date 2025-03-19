@@ -21,6 +21,7 @@ public class HomeController : Controller
         //persona.Nombre = "Ignacio Sandoval Cañete";
         //persona.Edad = 26;
         //persona.datos("Ignacio Sandoval C", 26);
+        //comentario de test git 
         persona.Nombre = "Ignacio Sandoval Cañete";
         persona.Edad = 26;
 
