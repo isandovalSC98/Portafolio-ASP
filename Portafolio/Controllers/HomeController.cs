@@ -15,6 +15,35 @@ public class HomeController : Controller
         _logger = logger;
     }
 
+    private List<DTO> ObtenerProyectos()
+    {
+        return new List<DTO>()
+        {
+            new DTO
+            {
+                Titulo = "Amazon",
+                Descripcion = "E-commerce",
+                Link = "https://www.amazon.com/-/es/",
+                ImagenURL = "/imagenes/asd.png"
+            },
+            new DTO
+            {
+                Titulo = "Reddit",
+                Descripcion = "Red social",
+                Link = "https://www.amazon.com/-/es/",
+                ImagenURL = "/imagenes/asd.png"
+            },
+            new DTO
+            {
+                Titulo = "Steam",
+                Descripcion = "Tienda en linea de videojuegos",
+                Link = "https://www.amazon.com/-/es/",
+                ImagenURL = "/imagenes/asd.png"
+            }
+
+        };
+    }
+
     public IActionResult Index(string nombre, int edad)
     {
         Persona persona = new Persona();
@@ -22,10 +51,14 @@ public class HomeController : Controller
         //persona.Edad = 26;
         //persona.datos("Ignacio Sandoval C", 26);
         //comentario de test git 
-        persona.Nombre = "Ignacio Sandoval Cañete";
-        persona.Edad = 26;
+        //persona.Nombre = "Ignacio Sandoval Cañete..";
+        //persona.Edad = 26;
 
-        return View("Index", persona);
+        var proyectos = ObtenerProyectos().Take(3).ToList();
+        var modelo = new HomeIndexViewModel() { DTO = proyectos };
+
+        return View("index",modelo);
+        //return View("index",persona);
     }
 
     public IActionResult Privacy()
