@@ -21,22 +21,22 @@ public class HomeController : Controller
         {
             new DTO
             {
-                Titulo = "Amazon",
-                Descripcion = "E-commerce",
+                Titulo = "Projecto 1",
+                Descripcion = "descripcion de projecto 1",
                 Link = "https://www.amazon.com/-/es/",
                 ImagenURL = "/imagenes/asd.png"
             },
             new DTO
             {
-                Titulo = "Reddit",
-                Descripcion = "Red social",
+                Titulo = "Projecto 2",
+                Descripcion = "descripcion de projecto 2",
                 Link = "https://www.amazon.com/-/es/",
                 ImagenURL = "/imagenes/asd.png"
             },
             new DTO
             {
-                Titulo = "Steam",
-                Descripcion = "Tienda en linea de videojuegos",
+                Titulo = "Projecto 3",
+                Descripcion = "descripcion de projecto 3",
                 Link = "https://www.amazon.com/-/es/",
                 ImagenURL = "/imagenes/asd.png"
             }
