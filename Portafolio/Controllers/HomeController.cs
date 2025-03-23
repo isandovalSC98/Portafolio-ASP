@@ -1,48 +1,22 @@
 using System.Diagnostics;
 using Microsoft.AspNetCore.Mvc;
 using Portafolio.Models;
+using Portafolio.servicios;
 
 namespace Portafolio.Controllers;
 
 public class HomeController : Controller
 {
     private readonly ILogger<HomeController> _logger;
+    private readonly RepositorioProjectos repositorioProjectos;
 
-
-
-    public HomeController(ILogger<HomeController> logger)
+    public HomeController(ILogger<HomeController> logger, RepositorioProjectos repositorioProjectos)
     {
         _logger = logger;
+        this.repositorioProjectos = repositorioProjectos;
     }
 
-    private List<DTO> ObtenerProyectos()
-    {
-        return new List<DTO>()
-        {
-            new DTO
-            {
-                Titulo = "Projecto 1",
-                Descripcion = "descripcion de projecto 1",
-                Link = "https://www.amazon.com/-/es/",
-                ImagenURL = "/imagenes/asd.png"
-            },
-            new DTO
-            {
-                Titulo = "Projecto 2",
-                Descripcion = "descripcion de projecto 2",
-                Link = "https://www.amazon.com/-/es/",
-                ImagenURL = "/imagenes/asd.png"
-            },
-            new DTO
-            {
-                Titulo = "Projecto 3",
-                Descripcion = "descripcion de projecto 3",
-                Link = "https://www.amazon.com/-/es/",
-                ImagenURL = "/imagenes/asd.png"
-            }
 
-        };
-    }
 
     public IActionResult Index(string nombre, int edad)
     {
@@ -53,8 +27,8 @@ public class HomeController : Controller
         //comentario de test git 
         //persona.Nombre = "Ignacio Sandoval Cañete..";
         //persona.Edad = 26;
-
-        var proyectos = ObtenerProyectos().Take(3).ToList();
+        
+        var proyectos = repositorioProjectos.ObtenerProyectos();
         var modelo = new HomeIndexViewModel() { DTO = proyectos };
 
         return View("index",modelo);
