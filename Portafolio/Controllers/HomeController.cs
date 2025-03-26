@@ -8,9 +8,9 @@ namespace Portafolio.Controllers;
 public class HomeController : Controller
 {
     private readonly ILogger<HomeController> _logger;
-    private readonly RepositorioProjectos repositorioProjectos;
+    private readonly IRepositorioProyectos repositorioProjectos;
 
-    public HomeController(ILogger<HomeController> logger, RepositorioProjectos repositorioProjectos)
+    public HomeController(ILogger<HomeController> logger, IRepositorioProyectos repositorioProjectos)
     {
         _logger = logger;
         this.repositorioProjectos = repositorioProjectos;
@@ -27,7 +27,8 @@ public class HomeController : Controller
         //comentario de test git 
         //persona.Nombre = "Ignacio Sandoval Cañete..";
         //persona.Edad = 26;
-        
+
+        _logger.LogInformation("Este es una mensaje de logger");
         var proyectos = repositorioProjectos.ObtenerProyectos();
         var modelo = new HomeIndexViewModel() { DTO = proyectos };
 
@@ -49,5 +50,21 @@ public class HomeController : Controller
 
     public string miFuncion() {
         return "Hola";
+    }
+
+    public IActionResult Proyectos() 
+    {
+        var proyectos = repositorioProjectos.ObtenerProyectos();
+        return View(proyectos);
+    }
+    [HttpGet]
+    public IActionResult Contacto()
+    {
+        return View();
+    }
+    [HttpPost]
+    public IActionResult Contacto(ContactoViewModel dasda)
+    {
+        return View();
     }
 }
