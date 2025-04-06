@@ -9,11 +9,13 @@ public class HomeController : Controller
 {
     private readonly ILogger<HomeController> _logger;
     private readonly IRepositorioProyectos repositorioProjectos;
+    private readonly IServicioEmail servicioEmail;
 
-    public HomeController(ILogger<HomeController> logger, IRepositorioProyectos repositorioProjectos)
+    public HomeController(ILogger<HomeController> logger, IRepositorioProyectos repositorioProjectos, IServicioEmail servicioEmail)
     {
         _logger = logger;
         this.repositorioProjectos = repositorioProjectos;
+        this.servicioEmail = servicioEmail;
     }
 
 
@@ -63,7 +65,13 @@ public class HomeController : Controller
         return View();
     }
     [HttpPost]
-    public IActionResult Contacto(ContactoViewModel dasda)
+    public async Task<IActionResult> Contacto(ContactoViewModel contactoViewModel)
+    {
+        await servicioEmail.Enviar(contactoViewModel);
+        return RedirectToAction("Gracias");
+    }
+
+    public IActionResult Gracias() 
     {
         return View();
     }
