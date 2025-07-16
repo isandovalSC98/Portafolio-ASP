@@ -36,20 +36,34 @@
     @*     } *@
     @* } *@
 
-    <div class="text-center">
-        <h1>Soy Ignacio Sandoval Cañete</h1>
-        <h2>Soy un desarrollador full stack especializado con tecnologias como .NET y PHP.</h2>
-
-        <img class="fotoPerfil" src="imagenes/usuario.png" alt="Alternate Text" />
+    
+    <div class="container" id="seccionNombre">
+        <div class="row">
+            <div class="col-12">
+                <div class="text-center">
+                    <h1 class="nombre">Ignacio Sandoval</h1>
+                    @* <img class="fotoPerfil" src="imagenes/usuario.png" alt="Alternate Text" /> *@
+                    <h5 class="subtitulo1"><center>Ingeniero informatico</center></h5>
+                </div>
+            </div>
+        </div>
     </div>
-
-    <div class="text-center">
-        <img class="logoTecnologias" src="imagenes/Microsoft_.NET_logo.svg.png" alt="Alternate Text" />
+    <br />
+    <br />
+    <div class="experiencia_profesional">
+        <partial name="_ExperienciaLaboral" />
     </div>
+    <br />
+
+    @* <div class="text-center"> *@
+    @*     <img class="logoTecnologias" src="imagenes/Microsoft_.NET_logo.svg.png" alt="Alternate Text" /> *@
+    @* </div> *@
 
     <partial name="_Presentacion"/>
 
 </div>
+
+
 
 <div style="margin-top: -105px">
     <div class="row" style="justify-content: center; text-align: center;">
@@ -94,10 +108,98 @@
         </div>
     </div>
 </div>
+<br/>
 <br />
+
+<div class="row">
+    <div class="col-md-12">
+        <h1 class="titulo">Tecnologias</h1>
+        <div class="logos" id="logos">
+            <div class="logos-slide" id="slider">
+                <img src="~/imagenes/mysql.jpg" class="imgTecnologias" alt="...">
+                <img src="~/imagenes/sqlserver.png" class="imgTecnologias" alt="...">
+                <img src="~/imagenes/postgresql.png" class="imgTecnologias" alt="...">
+                <img src="~/imagenes/powerbi.png" class="imgTecnologias" alt="...">
+                <img src="~/imagenes/jquery.jpg" class="imgTecnologias" alt="...">
+                <img src="~/imagenes/html5.png" class="imgTecnologias" alt="...">
+                <img src="~/imagenes/python.png" class="imgTecnologias" alt="...">
+                <img src="~/imagenes/php.png" class="imgTecnologias" alt="...">
+            </div>
+        </div>
+    </div>
+</div>
+
+
 <br />
 <br />
 <partial name="_seccionProjectos" model="Model.DTO"/>
+
+
+<br />
+<br />
+<div class="row redesSociales">
+    <div class="col-md-6">
+        <div class="seccionContacto">
+            <div class="container">
+                <div class="row">
+                    <div class="infoContacto">
+                        <i class="bi bi-asterisk"></i><span style="">Enviame un mensaje</span><i class="bi bi-asterisk"></i>
+                        <h2>Contactate con el desarrollador</h2>
+                        <br />
+                        
+                    </div>
+                    <div class="medioContacto">
+                        <span>Para mas consultas</span>
+                        <br>
+                        <a href="https://wa.me/964174018">+569 64174018</a>
+                        <br />
+                        <a href="">i.sandovalc98@gmail.com</a>
+                    </div>
+
+                </div>
+                <br /><br />
+                <div class="row">
+                    <div class="col-md-12">
+                        <h1>¡Puedes contactarme mediante mis redes sociales!</h1>
+                        <a class="iconoRedes" href="https://www.linkedin.com/in/ignacio-sandoval-ca%C3%B1ete-a17599186/"><i class="bi bi-linkedin"></i></a>
+                        <a class="iconoRedes" href="https://www.instagram.com/ignaciosandoval98/"><i class="bi bi-instagram"></i></a>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-6">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="formularioContacto">
+                        <form asp-controller="Home" asp-action="Contacto">
+                            <div class="mb-3">
+                                <label for="nombre" class="form-label">Nombre</label>
+                                <input type="text" class="form-control" name="nombre" id="nombre" placeholder="" />
+                            </div>
+                            <div class="mb-3">
+                                <label for="email" class="form-label">Email</label>
+                                <input type="email" class="form-control" name="email" id="email" placeholder="example@gmail.com" />
+                            </div>
+                            <div class="mb-3">
+                                <label for="mensaje" class="form-label">Mensaje</label>
+                                <textarea class="form-control" id="mensaje" name="mensaje" rows="3"></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary">Enviar mensaje</button>
+                        </form>
+                    </div>
+                </div>
+
+            </div>
+
+
+        </div>
+    </div>
+</div>
 
 
 

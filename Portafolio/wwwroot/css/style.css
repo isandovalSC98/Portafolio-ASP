@@ -1,4 +1,18 @@
-﻿.fotoPerfil {
+﻿#seccionNombre{
+    padding-top: 250px;
+    padding-block-end: 250px;
+}
+.nombre {
+    font-size: 10vw;
+    text-transform: uppercase;
+    letter-spacing: 2.2px;
+}
+.subtitulo1 {
+    font-size: 22px;
+    text-transform: uppercase;
+    letter-spacing: 2.2px;
+}
+.fotoPerfil {
     width: 20%;
     height: 20%;
 }
@@ -28,3 +42,87 @@
     list-style: none;
     padding-left: 0;
 }
+
+.titulo {
+    text-align: center;
+}
+
+.logos {
+    width: 80%;
+    display: flex;
+    margin: auto;
+    overflow: hidden;
+    white-space: nowrap;
+    position: relative;
+    margin-top: calc(10vh - 50px);
+}
+
+.logos-slide {
+    animation: 30s slide infinite linear;
+    img{
+           height: 50px;
+           margin: 0px 70px;
+       }
+}
+
+.logos::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 200;
+    height: 100%;
+    background: linear-gradient(to left, rgba(255,255,255,0), rgba(255,255,255));
+    content: " ";
+    z-index: 1;
+}
+
+.logos::after {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 200;
+    height: 100%;
+    background: linear-gradient(to right, rgba(255,255,255,0), rgba(255,255,255));
+    content: " ";
+    z-index: 1;
+}
+
+@keyframes slide{
+    from{
+        transform: translateX(0);
+    }
+    to{
+        transform: translateX(-100%);
+    }
+}
+
+.responsive {
+    width: 100%;
+    height: auto;
+}
+
+.redesSociales {
+    height: 650px;
+    background-color: #242627;
+}
+
+.redesSociales .seccionContacto {
+    color: white;
+}
+
+.iconoRedes{
+    font-size: 30px;
+}
+
+.formularioContacto{
+    border-radius: 10px;
+    border-color: red;
+}
+
+
+
+
+
+
+
+
