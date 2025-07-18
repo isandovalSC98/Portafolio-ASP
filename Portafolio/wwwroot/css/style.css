@@ -103,20 +103,45 @@
 
 .redesSociales {
     height: 650px;
-    background-color: #242627;
+    
 }
 
 .redesSociales .seccionContacto {
     color: white;
 }
+.tituloFooter {
+    color: #3067FF;
+    font-family: "Inter", sans-serif;
+    font-size: 13px;
+    font-weight: 500;
+}
+.subtituloFooter {
+    margin-top: 25px;
+}
 
-.iconoRedes{
+.iconoRedes {
     font-size: 30px;
 }
 
-.formularioContacto{
+.infoContacto {
+    margin-top: 35px;
+}
+.medioContacto {
+    margin-top: 70px;
+}
+
+.formularioContacto {
     border-radius: 10px;
     border-color: red;
+    background-color: aqua;
+    margin-top: 25px;
+}
+
+.side1 {
+    background-color: #242627;
+}
+.side2 {
+    background-color: #242627;
 }
 
 

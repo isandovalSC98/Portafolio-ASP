@@ -138,16 +138,15 @@
 <br />
 <br />
 <div class="row redesSociales">
-    <div class="col-md-6">
+    <div class="col-md-8 side1">
         <div class="seccionContacto">
             <div class="container">
                 <div class="row">
                     <div class="infoContacto">
-                        <i class="bi bi-asterisk"></i><span style="">Enviame un mensaje</span><i class="bi bi-asterisk"></i>
-                        <h2>Contactate con el desarrollador</h2>
-                        <br />
-                        
+                        <i class="bi bi-asterisk"></i><span class="tituloFooter">ENVIAME UN MENSAJE</span><i class="bi bi-asterisk"></i>
+                        <h2 class="subtituloFooter">Contactate con el desarrollador</h2>
                     </div>
+
                     <div class="medioContacto">
                         <span>Para mas consultas</span>
                         <br>
@@ -171,26 +170,38 @@
         </div>
     </div>
 
-    <div class="col-md-6">
+    <div class="col-md-4 side2">
         <div class="container">
             <div class="row">
-                <div class="col-12">
+                <div class="col-md-12">
                     <div class="formularioContacto">
-                        <form asp-controller="Home" asp-action="Contacto">
-                            <div class="mb-3">
-                                <label for="nombre" class="form-label">Nombre</label>
-                                <input type="text" class="form-control" name="nombre" id="nombre" placeholder="" />
+
+                        <div class="card text-center">
+                            <div class="card-header">
+                                Contacto
                             </div>
-                            <div class="mb-3">
-                                <label for="email" class="form-label">Email</label>
-                                <input type="email" class="form-control" name="email" id="email" placeholder="example@gmail.com" />
+                            <div class="card-body">
+                                <div class="row">
+                                    <form asp-controller="Home" asp-action="Contacto">
+                                        <div class="mb-3">
+                                            <label for="nombre" class="form-label">Nombre</label>
+                                            <input type="text" class="form-control" name="nombre" id="nombre" placeholder="" />
+                                        </div>
+                                        <div class="mb-3">
+                                            <label for="email" class="form-label">Email</label>
+                                            <input type="email" class="form-control" name="email" id="email" placeholder="example@gmail.com" />
+                                        </div>
+                                        <div class="mb-3">
+                                            <label for="mensaje" class="form-label">Mensaje</label>
+                                            <textarea class="form-control" id="mensaje" name="mensaje" rows="3"></textarea>
+                                        </div>
+                                        <button type="submit" class="btn btn-primary">Enviar</button>
+                                    </form>
+                                </div>
                             </div>
-                            <div class="mb-3">
-                                <label for="mensaje" class="form-label">Mensaje</label>
-                                <textarea class="form-control" id="mensaje" name="mensaje" rows="3"></textarea>
-                            </div>
-                            <button type="submit" class="btn btn-primary">Enviar mensaje</button>
-                        </form>
+
+                        </div>
+                       
                     </div>
                 </div>
 
